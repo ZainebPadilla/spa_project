@@ -10,3 +10,59 @@ body {
 #app {
   padding: 20px;
 }
+
+.game-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 220px; // Taille de la carte pour les grands écrans
+  margin: 10px;
+  text-align: center;
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; // Limiter la hauteur des images
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .tags a {
+    font-size: 14px;
+    padding: 2px 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #007bff;
+  }
+}
+
+$mobile-width: 768px; // Set the appropriate value
+
+@media (max-width: $mobile-width) {
+  body {
+    background: lightgray;
+  }
+}
+
+// Mixin pour les media queries
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+      @content;
+  }
+}
+
+// Utilisation
+@include mobile {
+  .game-card {
+    width: 150px; // Réduit la largeur sur mobile
+    font-size: 12px; // Réduit la taille du texte sur mobile
+  }
+}
