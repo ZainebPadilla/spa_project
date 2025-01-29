@@ -3,7 +3,7 @@ $font-family: 'Arial', sans-serif;
 
 body {
   font-family: $font-family;
-  background-color: #f4f4f4;
+  background-color: #f3dcdc;
   margin: 0;
 }
 
@@ -11,6 +11,25 @@ body {
   padding: 20px;
 }
 
+.game-detail {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 500px; // Taille de la carte pour les grands écrans
+  margin: 10px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; // Limiter la hauteur des images
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
 .game-card {
   background-color: #fff;
   border-radius: 8px;
